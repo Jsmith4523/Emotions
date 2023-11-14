@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Emotion: Codable {
+struct Emotion: Codable, Comparable {
     
     init(feeling: Feeling, description: String) {
         self.feeling = feeling
@@ -19,6 +19,14 @@ struct Emotion: Codable {
     let feeling: Feeling
     let description: String
     let dateTimeInterval: TimeInterval
+    
+    static func < (lhs: Emotion, rhs: Emotion) -> Bool {
+        lhs.dateTimeInterval < rhs.dateTimeInterval
+    }
+    
+    static func > (lhs: Emotion, rhs: Emotion) -> Bool {
+        lhs.dateTimeInterval > rhs.dateTimeInterval
+    }
 }
 
 enum Feeling: Codable, CaseIterable {
@@ -68,5 +76,9 @@ enum Feeling: Codable, CaseIterable {
         case .fearful:
             return .systemIndigo
         }
+    }
+    
+    static func basedUponEmoji(_ emoji: String) -> Self? {
+        return allCases.first(where: {$0.emoji == emoji})
     }
 }

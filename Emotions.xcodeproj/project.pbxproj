@@ -11,6 +11,7 @@
 		245C4B5C2B03453A0013B183 /* EmotionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245C4B5A2B03453A0013B183 /* EmotionCollectionViewCell.xib */; };
 		2497BBFB2B035DC1009C5785 /* EmotionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2497BBFA2B035DC1009C5785 /* EmotionsViewModel.swift */; };
 		2497BBFE2B035E85009C5785 /* UsersEmotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2497BBFD2B035E85009C5785 /* UsersEmotionManager.swift */; };
+		249B80322B04159800828C0B /* EmotionComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B80312B04159800828C0B /* EmotionComposeViewController.swift */; };
 		249CB3802B032B910072FC27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249CB37F2B032B910072FC27 /* AppDelegate.swift */; };
 		249CB3822B032B910072FC27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249CB3812B032B910072FC27 /* SceneDelegate.swift */; };
 		249CB3842B032B910072FC27 /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249CB3832B032B910072FC27 /* EmotionsViewController.swift */; };
@@ -24,6 +25,7 @@
 		245C4B5A2B03453A0013B183 /* EmotionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmotionCollectionViewCell.xib; sourceTree = "<group>"; };
 		2497BBFA2B035DC1009C5785 /* EmotionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewModel.swift; sourceTree = "<group>"; };
 		2497BBFD2B035E85009C5785 /* UsersEmotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersEmotionManager.swift; sourceTree = "<group>"; };
+		249B80312B04159800828C0B /* EmotionComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionComposeViewController.swift; sourceTree = "<group>"; };
 		249CB37C2B032B910072FC27 /* Emotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emotions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		249CB37F2B032B910072FC27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		249CB3812B032B910072FC27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,12 +87,12 @@
 				249CB37F2B032B910072FC27 /* AppDelegate.swift */,
 				249CB3812B032B910072FC27 /* SceneDelegate.swift */,
 				249CB3882B032B930072FC27 /* Assets.xcassets */,
-				2497BBF92B035DAD009C5785 /* Views */,
-				249CB3932B032BE20072FC27 /* Model */,
-				249CB3962B032DD20072FC27 /* View Controller */,
-				2497BBFC2B035E72009C5785 /* View Model */,
-				249CB3852B032B910072FC27 /* Main.storyboard */,
 				249CB38D2B032B930072FC27 /* Info.plist */,
+				249CB3852B032B910072FC27 /* Main.storyboard */,
+				249CB3932B032BE20072FC27 /* Model */,
+				2497BBFC2B035E72009C5785 /* View Model */,
+				249CB3962B032DD20072FC27 /* View Controller */,
+				2497BBF92B035DAD009C5785 /* Views */,
 			);
 			path = Emotions;
 			sourceTree = "<group>";
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				249CB3832B032B910072FC27 /* EmotionsViewController.swift */,
+				249B80312B04159800828C0B /* EmotionComposeViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				249CB3842B032B910072FC27 /* EmotionsViewController.swift in Sources */,
+				249B80322B04159800828C0B /* EmotionComposeViewController.swift in Sources */,
 				249CB3802B032B910072FC27 /* AppDelegate.swift in Sources */,
 				249CB3822B032B910072FC27 /* SceneDelegate.swift in Sources */,
 				249CB3952B032BE90072FC27 /* Emotion.swift in Sources */,
@@ -340,6 +344,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,6 +373,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

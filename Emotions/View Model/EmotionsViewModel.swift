@@ -15,23 +15,26 @@ final class EmotionsViewModel: NSObject {
     
     var emotions = [Emotion]() {
         didSet {
-            delegate?.didReceiveEmotions(emotions)
+            self.delegate?.didReceiveEmotions(emotions)
         }
     }
     
     weak var delegate: EmotionsDelegate?
+    private let manager = UsersEmotionManager.shared
     
     override init() {
         super.init()
-        self.getEmotions()
     }
-    
     
     func getEmotions() {
-        
+        let emotions = manager.getUsersEmotions()
+        self.emotions = emotions
     }
     
-    func saveNewEmotion(_ emotion: Emotion) {
-        
+    func saveNewEmotion(_ emotion: Emotion, completion: @escaping () -> ()) throws {
+        try manager.saveEmotion(emotion) { [weak self] in
+            self?.getEmotions()
+            completion()
+        }
     }
 }

@@ -18,13 +18,19 @@ class EmotionCollectionViewCell: UICollectionViewCell {
         
     }
     
-    var color: UIColor! {
+    var emotion: Emotion! {
         didSet {
-            self.backgroundColor = color
+            self.configureCellView()
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    private func configureCellView() {
+        self.backgroundColor = emotion.feeling.color
+        self.emojiLabel.text = emotion.feeling.emoji
+        self.descriptionLabel.text = emotion.description
     }
 }

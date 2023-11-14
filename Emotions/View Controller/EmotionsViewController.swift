@@ -12,8 +12,18 @@ class EmotionsViewController: UIViewController {
     //MARK: Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private let viewModel = EmotionsViewModel()
+    private var emotions = [Emotion]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.delegate = self
+        viewModel.getEmotions()
         self.configureNavigationView()
         self.configureScrollView()
     }
@@ -39,25 +49,38 @@ class EmotionsViewController: UIViewController {
         collectionView.register(UINib(nibName: "EmotionCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "Emotion")
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "ComposeView":
+            let navigationController = segue.destination as! UINavigationController
+            let composeVC = navigationController.topViewController as! EmotionComposeViewController
+            composeVC.viewModel = viewModel
+        default:
+            break
+        }
+    }
+    
     @objc
     private func presentComposeEmotionView() {
-        
+        performSegue(withIdentifier: "ComposeView", sender: nil)
     }
 }
 
+//MARK: - UICollectionViewDataSource
 extension EmotionsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Feeling.allCases.count
+        return emotions.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Emotion", for: indexPath) as! EmotionCollectionViewCell
-        cell.color = Feeling.allCases[indexPath.item].color
+        cell.emotion = emotions[indexPath.row]
         return cell
     }
 }
 
+//MARK: - UICollectionViewDelegate
 extension EmotionsViewController: UICollectionViewDelegate {
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -69,3 +92,15 @@ extension EmotionsViewController: UICollectionViewDelegate {
     }
 }
 
+//MARK: - EmotionsDelegate
+extension EmotionsViewController: EmotionsDelegate {
+    func didReceiveEmotions(_ emotions: [Emotion]) {
+        self.emotions = emotions
+        if emotions.isEmpty {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                //Give the application a moment to load up the current view controller; else will present warning of detached view controller
+                self.performSegue(withIdentifier: "ComposeView", sender: nil)
+            }
+        }
+    }
+}
