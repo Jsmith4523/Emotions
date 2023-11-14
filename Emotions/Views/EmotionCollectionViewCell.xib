@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Mc2-CK-xRV" customClass="EmotionCollectionViewCell" customModule="Emotions" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMS-x2-MVm">
+                    <rect key="frame" x="147" y="69" width="120" height="499"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="JxQ-3D-C21"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This would be the descripton of the mood" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjr-jx-kJP">
+                    <rect key="frame" x="25" y="593" width="364" height="94"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="94" id="NLi-tZ-8t1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msj-Vm-aQf">
+                    <rect key="frame" x="25" y="752" width="364" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="gPx-bf-K53"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="More">
+                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="moreButton:" destination="Mc2-CK-xRV" eventType="touchUpInside" id="uUF-5G-dtx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="d0j-en-h7P"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Jjr-jx-kJP" firstAttribute="leading" secondItem="d0j-en-h7P" secondAttribute="leading" constant="25" id="IMk-Sk-EB4"/>
+                <constraint firstItem="Msj-Vm-aQf" firstAttribute="top" secondItem="Jjr-jx-kJP" secondAttribute="bottom" constant="65" id="RHB-qI-J2k"/>
+                <constraint firstItem="sMS-x2-MVm" firstAttribute="top" secondItem="d0j-en-h7P" secondAttribute="top" constant="25" id="SVc-OA-4nf"/>
+                <constraint firstItem="sMS-x2-MVm" firstAttribute="centerX" secondItem="Mc2-CK-xRV" secondAttribute="centerX" id="d7x-G9-Mj6"/>
+                <constraint firstItem="d0j-en-h7P" firstAttribute="bottom" secondItem="Msj-Vm-aQf" secondAttribute="bottom" constant="60" id="g4p-pA-htw"/>
+                <constraint firstItem="Jjr-jx-kJP" firstAttribute="top" secondItem="sMS-x2-MVm" secondAttribute="bottom" constant="25" id="k4u-2D-4a1"/>
+                <constraint firstItem="d0j-en-h7P" firstAttribute="trailing" secondItem="Jjr-jx-kJP" secondAttribute="trailing" constant="25" id="ncE-Mg-QVv"/>
+                <constraint firstItem="d0j-en-h7P" firstAttribute="trailing" secondItem="Msj-Vm-aQf" secondAttribute="trailing" constant="25" id="rdF-7E-Jxb"/>
+                <constraint firstItem="Msj-Vm-aQf" firstAttribute="leading" secondItem="d0j-en-h7P" secondAttribute="leading" constant="25" id="s8T-fg-yGh"/>
+            </constraints>
+            <connections>
+                <outlet property="descriptionLabel" destination="Jjr-jx-kJP" id="OhJ-pb-VaH"/>
+                <outlet property="emojiLabel" destination="sMS-x2-MVm" id="i4h-s2-R5O"/>
+            </connections>
+            <point key="canvasLocation" x="108.83720930232558" y="82.403433476394852"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
