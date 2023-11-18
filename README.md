@@ -6,9 +6,7 @@
 # Handwritten Wireframe:
 <img src='https://github.com/Jsmith4523/Emotions/blob/main/IMG_6538.jpeg' title='Video Walkthrough' width='250' alt='Video Walkthrough'/>
 
-#Storyboard layout
-
-Project Specs
+# Project Specs
 
 Tiktok-like feed (UIScrollView or UICollectionView)
 Persistant Storage (CoreData)
