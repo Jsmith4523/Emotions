@@ -55,6 +55,9 @@ class EmotionsViewController: UIViewController {
             let navigationController = segue.destination as! UINavigationController
             let composeVC = navigationController.topViewController as! EmotionComposeViewController
             composeVC.viewModel = viewModel
+        case "NewEmote":
+            let newEmoteVC = segue.destination as! NewEmotionsViewController
+            newEmoteVC.viewModel = self.viewModel
         default:
             break
         }
@@ -97,9 +100,10 @@ extension EmotionsViewController: EmotionsDelegate {
     func didReceiveEmotions(_ emotions: [Emotion]) {
         self.emotions = emotions
         if emotions.isEmpty {
+            self.navigationItem.rightBarButtonItem = nil
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 //Give the application a moment to load up the current view controller; else will present warning of detached view controller
-                self.performSegue(withIdentifier: "ComposeView", sender: nil)
+                self.performSegue(withIdentifier: "NewEmote", sender: nil)
             }
         }
     }

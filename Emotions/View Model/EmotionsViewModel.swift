@@ -37,4 +37,8 @@ final class EmotionsViewModel: NSObject {
             completion()
         }
     }
+    
+    func deleteEmotion(_ emotion: Emotion) {
+        
+    }
 }

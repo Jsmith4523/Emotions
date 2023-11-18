@@ -16,6 +16,7 @@ final class UsersEmotionManager {
         case codableError
     }
     
+    ///Shared instance
     static let shared = UsersEmotionManager()
     
     private init() {}
@@ -46,5 +47,9 @@ final class UsersEmotionManager {
         let data = try JSONEncoder().encode(currentEmotions)
         UserDefaults.standard.set(data, forKey: emotionsDataKey)
         completion()
+    }
+    
+    func deleteEmotion(_ emotion: Emotion) {
+        
     }
 }

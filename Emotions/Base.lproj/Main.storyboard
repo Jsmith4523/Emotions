@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pTO-aR-E6z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pTO-aR-E6z">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -22,20 +22,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C26-8D-CqL">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="403.66666666666669" height="853"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="mbM-jE-Ati">
-                                        <rect key="frame" x="-10.666666666666666" y="0.0" width="414" height="853"/>
+                                        <rect key="frame" x="-5.333333333333333" y="0.0" width="403.66666666666669" height="853"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zmz-as-dGL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="853"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="403.66666666666669" height="853"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="414" height="853"/>
+                                        <size key="customSize" width="403.66666666666669" height="853"/>
+                                        <connections>
+                                            <segue destination="ZnW-pY-6hq" kind="showDetail" identifier="NewEmote" id="Mhu-Vn-rcS"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -57,7 +60,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.5797101449275" y="-34.151785714285715"/>
+            <point key="canvasLocation" x="1040.4580152671756" y="-34.507042253521128"/>
+        </scene>
+        <!--New Emotions View Controller-->
+        <scene sceneID="DWC-YS-KzT">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="ZnW-pY-6hq" customClass="NewEmotionsViewController" customModule="Emotions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qeF-Aa-34T">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a New Emotion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtv-Pb-AJb">
+                                <rect key="frame" x="50" y="200" width="293" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vtJ-Zf-7i9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get started adding your emotions by clicking 'Add Emotion' below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apy-kU-xLF">
+                                <rect key="frame" x="20" y="263" width="353" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="3kJ-ks-0MG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✌️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vz6-gw-i9x">
+                                <rect key="frame" x="146" y="76" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bFq-gO-9VY"/>
+                                    <constraint firstAttribute="width" constant="100" id="dMx-vI-xEr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JK-Pm-1YJ">
+                                <rect key="frame" x="35" y="568" width="323" height="50"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2HG-wG-AHe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Emotion">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="button:" destination="ZnW-pY-6hq" eventType="touchUpInside" id="gco-P9-noc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="31N-jU-gEV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gtv-Pb-AJb" firstAttribute="top" secondItem="vz6-gw-i9x" secondAttribute="bottom" constant="24" id="3f2-sH-oVw"/>
+                            <constraint firstItem="6JK-Pm-1YJ" firstAttribute="top" secondItem="Apy-kU-xLF" secondAttribute="bottom" constant="248" id="8WF-vY-bj1"/>
+                            <constraint firstItem="vz6-gw-i9x" firstAttribute="leading" secondItem="31N-jU-gEV" secondAttribute="leading" constant="146" id="Gou-vG-Par"/>
+                            <constraint firstItem="31N-jU-gEV" firstAttribute="trailing" secondItem="6JK-Pm-1YJ" secondAttribute="trailing" constant="35" id="Kyk-W0-jgi"/>
+                            <constraint firstItem="6JK-Pm-1YJ" firstAttribute="leading" secondItem="31N-jU-gEV" secondAttribute="leading" constant="35" id="NNL-hb-6vl"/>
+                            <constraint firstItem="Gtv-Pb-AJb" firstAttribute="centerX" secondItem="qeF-Aa-34T" secondAttribute="centerX" id="O4V-ln-kqj"/>
+                            <constraint firstItem="vz6-gw-i9x" firstAttribute="top" secondItem="31N-jU-gEV" secondAttribute="top" constant="76" id="OEc-BE-KsI"/>
+                            <constraint firstItem="Gtv-Pb-AJb" firstAttribute="leading" secondItem="31N-jU-gEV" secondAttribute="leading" constant="50" id="TfZ-Ca-3IC"/>
+                            <constraint firstItem="Apy-kU-xLF" firstAttribute="leading" secondItem="qeF-Aa-34T" secondAttribute="leading" constant="20" id="XYX-HN-L8o"/>
+                            <constraint firstItem="31N-jU-gEV" firstAttribute="trailing" secondItem="Gtv-Pb-AJb" secondAttribute="trailing" constant="50" id="YZ5-jq-Wik"/>
+                            <constraint firstAttribute="trailing" secondItem="Apy-kU-xLF" secondAttribute="trailing" constant="20" id="cCv-uD-Wee"/>
+                            <constraint firstItem="31N-jU-gEV" firstAttribute="trailing" secondItem="vz6-gw-i9x" secondAttribute="trailing" constant="147" id="eqf-ln-a9o"/>
+                            <constraint firstItem="Apy-kU-xLF" firstAttribute="top" secondItem="Gtv-Pb-AJb" secondAttribute="bottom" constant="13" id="qmG-sd-PrB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="1Xu-GZ-xqA" kind="presentation" identifier="ComposeView" id="6Nc-Ll-yJ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQn-4y-2X4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="739"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sic-ih-NXr">
@@ -76,7 +156,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtP-SS-wa4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.43478260869566" y="-34.151785714285715"/>
+            <point key="canvasLocation" x="108" y="-35"/>
         </scene>
         <!--New Emotion-->
         <scene sceneID="nNE-KO-5Lo">
@@ -114,9 +194,8 @@
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="How are you feeling rn???" translatesAutoresizingMaskIntoConstraints="NO" id="KiV-n1-wMh">
                                 <rect key="frame" x="16" y="378" width="361" height="400"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -144,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mjj-NI-Wbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1945.8015267175572" y="739.43661971830988"/>
+            <point key="canvasLocation" x="1946" y="739"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LSj-9u-x7G">
@@ -165,15 +244,21 @@
             <point key="canvasLocation" x="1040" y="739"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6Nc-Ll-yJ2"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

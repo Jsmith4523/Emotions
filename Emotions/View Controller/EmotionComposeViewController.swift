@@ -10,6 +10,7 @@ import UIKit
 class EmotionComposeViewController: UIViewController {
     
     var viewModel: EmotionsViewModel!
+    var completion: (()->())? = nil
     
     //MARK: Outlets
     @IBOutlet weak var emojiLabel: UILabel!
@@ -39,6 +40,7 @@ class EmotionComposeViewController: UIViewController {
         for i in 0..<feelings.count {
             feelingPicker.insertSegment(withTitle: feelings[i].emoji, at: i, animated: false)
         }
+        feelingPicker.selectedSegmentIndex = 0
     }
     
     @objc
@@ -60,6 +62,7 @@ class EmotionComposeViewController: UIViewController {
     @objc
     private func dismissView() {
         dismiss(animated: true)
+        completion?()
     }
     
     private func presentErrorSavingEmotion() {
