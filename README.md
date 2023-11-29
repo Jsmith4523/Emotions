@@ -17,7 +17,7 @@
 
 # Unit 9 Updates
 
-<img src='https://github.com/Jsmith4523/Emotions/blob/main/Emotions.gif' title='Video Walkthrough' width='350' alt='Video Walkthrough'/>
+<img src='https://github.com/Jsmith4523/Emotions/blob/main/Emotions%20Unit%209.gif' title='Video Walkthrough' width='350' alt='Video Walkthrough'/>
 
 TikTok-like feed (UICollectionView)
 Persistant Storage (UserDefaults)
