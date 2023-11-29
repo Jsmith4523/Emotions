@@ -8,9 +8,9 @@
 
 # Project Specs
 
-Tiktok-like feed (UIScrollView or UICollectionView)
-Persistant Storage (CoreData)
-MVC Design Pattern
+- Tiktok-like feed (UIScrollView or UICollectionView)
+- Persistant Storage (CoreData)
+- MVC Design Pattern
 
 - Implemented wire-frame layout within Storyboard
 - Creating custom cell view classes
