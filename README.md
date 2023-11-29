@@ -28,9 +28,20 @@ MVC Design Pattern + Protocools
 - Error handling using do-catch.
 - UINavigationController.
 
-# Unit 10 Updates
+# Unit 10 Updates and Spring Goals
+
 <img src='https://github.com/Jsmith4523/Emotions/blob/main/Emotions.gif' title='Video Walkthrough' width='350' alt='Video Walkthrough'/>
 
+## Sprint Goals (Unit 10)
+Since the Unit 9 submission of this project, I have determined one of more following issues with the application:
+- [x] Inability to delete a emotion with button present.
+- [x] 'Emotion' struct UUID is not being properly decoded as the 'id' property is immutable.
+- [x] Issue where canceling the creation of  composing a new 'Emotion' causes the application to present a white view controller.
+- [x] UI Layout issues within 'EmotionsCellView' that did not add the date UILabel as a subview with proper auto-layout constraints.
+
+These issues should be fixed by the submission of Unit 10.
+
+## Issues Fixed as of Unit 10
 - Date of Memory now shows within the emotion cell view.
 - UI Bug fixes and improvements.
 - User can now delete a memory.
