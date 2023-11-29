@@ -30,6 +30,7 @@ MVC Design Pattern + Protocools
 
 # Unit 10 Updates
 <img src='https://github.com/Jsmith4523/Emotions/blob/main/Emotions.gif' title='Video Walkthrough' width='350' alt='Video Walkthrough'/>
+
 - Date of Memory now shows within the emotion cell view.
 - UI Bug fixes and improvements.
 - User can now delete a memory.
